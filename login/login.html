@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head >
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/loginstyle.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Itim&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="../favicon.png" >
+    <title>Login</title>
+
+    
+
+  </head>
+  <body>
+    <div class="header">
+        <div class="pizzahut">
+            <h2><img src="../favicon.png" alt="" height="28px"> </h2>
+            <a href="..\index.html" target="_blank">PizzaHut</a>
+        </div>
+    </div>
+    <div class="container hidden">
+      <div class="logincont">
+        <div class="login">
+          <div class="welcome">
+            <p id="welcome">Welcome</p>
+            <p id="logintext">Login to Continue</p>
+          </div>
+          <form action="">
+            <div class="username">
+              <i class="fa-solid fa-user fa-lg"></i>
+              <input
+                type="text"
+                placeholder="User Name"
+                required
+                id="username"
+              />
+            </div>
+            <div class="password">
+              <i class="fa-solid fa-lock fa-lg"></i>
+              <input type="password" id="password" placeholder="Enter Password" required />
+              <i class="fa-solid fa-eye-slash" id="eyeclose"></i>
+              
+            </div>
+            <div class="loginbtncont">
+              <button id="loginbtn">LOGIN</button>
+              <a href="">FORGOT PASSWORD ?</a>
+            </div>
+            <div class="singup"><b>New User?</b> <a href="..\signup\signup.html" ><b>SIGN UP</b></a></div>
+          </form>
+          <p id="lastpara"><span>or connect with</span></p>
+          <div class="lasticon">
+            <i class="fa-brands fa-google"></i>
+            <i class="fa-brands fa-facebook"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+        
+    </div>
+  </body>
+  
+ <script>
+  let password = document.getElementById('password');
+  let eyeclose = document.getElementById('eyeclose');
+
+  eyeclose.addEventListener('click', () => {
+    if (password.type === 'password') {
+      password.type = 'text';
+      eyeclose.classList.remove('fa-eye-slash');
+      // <i class="fa-solid fa-eye"></i> its the  icon 
+      eyeclose.classList.add('fa-eye');
+    } else {
+      password.type = 'password';
+      eyeclose.classList.remove('fa-eye');
+      eyeclose.classList.add('fa-eye-slash');
+    }
+  });
+
+  
+ document.addEventListener("DOMContentLoaded", () => {
+  const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+              entry.target.classList.add('show');
+          } else {
+              entry.target.classList.remove('show');
+          }
+      });
+  });
+
+  const hiddenElements = document.querySelectorAll('.hidden');
+  hiddenElements.forEach((el) => observer.observe(el));
+});
+
+
+</script>
+
+</html>

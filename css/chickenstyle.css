@@ -1,0 +1,353 @@
+*{
+    padding: 0;
+    margin: 0; 
+   
+}
+
+  
+
+html{
+    font-size: 10px;
+}
+body{
+    font-family: sans-serif;
+    color:#555;
+    background-color: #fdf2e9;
+}
+.header{
+    display: flex;
+    justify-content: space-between; 
+    margin:20px 20px;
+    font-size: 2rem;
+    background-color: #d5cece3c;
+
+}
+.pizzahut{
+    margin-left: 10px;
+}
+.pizzahut a{
+    text-decoration: none;
+    color: #555;
+}
+nav a{
+    margin-right: 10px;
+    text-decoration: none;
+    font-size: 2.5rem;
+    color: #555;
+    
+}
+  nav .a:hover{
+    color:#e67e22;
+
+}   
+.singin{
+    text-align: center;
+    display: inline-block;
+    height: 28px;
+    padding: 5px 10px;
+    background-color:#e67e22;
+    color: #fdf2e9; 
+    border-radius: 10px;
+    border:2px solid #efe9e9;
+    transition: background-color 0.5s;
+}
+.singin a{
+    height: 20px;
+}
+.singin:hover{
+    background-color: #86A7FC;
+    border: 2px  solid rgba(0,0,0,.5);
+   
+}
+
+/* buttonclose style */
+.buttonmenuclose{
+ 
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: none;
+}
+.buttonmenuclose i{
+    
+    height: 35px;
+    width: 35px; 
+    color: #545454;
+    font-size: 2.5rem; 
+    margin-right: 15px;
+    font-weight: 800;
+}
+#close{
+    display: none;
+}
+
+
+/* card style start here */
+.topic{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 600;
+     color: rgb(237, 64, 64); 
+   
+}
+.cpizzaimg{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr ; 
+    align-items: center;
+    justify-items: center;
+
+    margin:20px 20px; 
+    row-gap: 20px;
+}
+.card{
+    height: 310px;
+    box-shadow: 0 12px 10px rgba(148, 146, 146, 0.9);
+    width: 260px;
+    background-color: #ece5e5;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    /* ithu card ah parent ah kudukuram ivara vacku popular(child) move avar */
+    position: relative;
+}
+.card img{
+    height: 180px;
+    width: 260px;
+}
+.card:hover{
+    scale: 1.08;
+}
+.name{
+    text-align: center;
+    font-weight: 690;
+    font-size: 1.6rem;
+    color: rgb(232, 141, 22);
+}
+.descript{
+ 
+ margin-left: 8px;
+ margin-right: 8px;
+ text-align: justify;
+ font-size: 1.1rem;
+}
+.price{
+    margin-top: 3px;
+    font-size: 1.2rem;
+    text-align: center;
+
+}
+.price strong{
+    color:rgb(237, 31, 31);
+}
+.btn{
+    position: absolute;
+    top: 258px;
+    left: 15px;
+    width: 230px;
+    text-align: center;
+    padding: 10px 10px;
+    background-color:#e67e22;
+    color: #fdf2e9;
+    border-radius: 10px;
+    border:2px solid #efe9e9;
+    transition: background-color 0.5s;
+}
+.btn:hover{
+    background-color: #86A7FC;
+    cursor: pointer;
+    border: 2px  solid rgba(0,0,0,.5);
+    
+}
+
+/*Popular sttyle*/
+.popular{
+    background-color: #c81818;
+    width: 140px;
+    color: #ece5e5;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 500;
+    position: absolute;
+    text-align: center;
+    top: 30px;
+    left: 150px;
+    transform: rotate(45deg);
+    box-shadow: 0 -6px 7px rgba(75, 30, 30, 0.9); 
+    
+}
+
+
+/* Footer */
+
+footer{
+    background-color: #cfc9c9cd;
+    /* height: 500px; */
+    margin-top: 20px;
+    color: #302b2b;
+}
+.footer{
+   
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    
+    padding: 10px 10px;
+    font-size: 2rem;
+}
+.contact p{
+    margin-top: 10px;
+}
+.contact p:nth-child(1){
+    font-weight: 700;
+}
+.navfooter,.privacy{
+    display: flex;
+    flex-direction: column;
+}
+.navfooter a,.privacy a{
+    margin-top: 10px;
+    text-decoration: none;
+    color: #302b2b;
+}
+.icon{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.icon i{
+    margin-left: 5px;
+}
+.icon i:hover{
+  scale: 1.2;
+  color: #e67e22;
+  cursor: pointer;
+} 
+footer a:hover{
+    color: #e67e22;
+}
+
+.contact iframe{
+    border-radius: 10px;
+    box-shadow: 0 12px 10px rgba(148, 146, 146, 0.9);
+
+}
+.contact iframe:hover{
+    transform: translateY(-10px);
+}
+
+footer #copyright{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+/* animate while scroll */
+
+.hidden{
+    opacity: 0;
+    /* filter: blur(5px); */
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+.show{
+    opacity: 1;
+    /* filter: blur(0); */
+    transform: translateX(0);
+}
+
+
+@media screen and (max-width:1200px){
+    .cpizzaimg{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+        justify-items: center;
+
+    }
+    .footer{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+@media screen and (max-width:900px) {
+    .cpizzaimg{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+  
+        align-items: center;
+        justify-items: center;
+
+    }
+    .footer{
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+    }
+}
+
+@media screen and (max-width:680px) {
+    .cpizzaimg{
+        display: grid;
+        grid-template-columns: 1fr;
+    
+        align-items: center;
+        justify-items: center;
+
+    }
+    .footer{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+
+    .buttonmenuclose{
+        display:block;
+    }
+    nav{
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: #fafafa;
+        width: 100%;
+        height: 25vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transform: translateX(100%);
+        transition: all .5s ease-in;
+        gap:10px;
+        margin-top: 5px;
+        /* transition: all .5s; */
+        /* if we use display none we cant put transitiion thats why use opacity to hide and under 3 steps are uses to hide an element using without display none ; */
+        opacity: 0;  /* for hide nav this is step 1*/
+        /* step2 make mouse keyboard unaccesble */
+        pointer-events: none;
+
+           /* step3 hide from screen reader */
+           pointer-events: hidden;
+
+    
+    }
+    .nav-open nav{
+        opacity: 1;
+        pointer-events: auto;
+        visibility: visible;
+        transform: translateX(0);
+    }
+    
+    .nav-open #menu{
+        display: none;
+    }
+    
+    .nav-open #close{
+      
+        display: block; 
+    }
+    .buttonmenuclose {
+        position: absolute;
+        top: 21px;
+        right: 10px;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+}
